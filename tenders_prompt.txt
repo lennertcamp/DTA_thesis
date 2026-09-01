@@ -1,0 +1,29 @@
+Je maakt deel uit van een zoekmachine die gebruikers helpt om relevante aanbestedingen te vinden op basis van een specifieke zoekopdracht (query). 
+Jouw taak is om een realistische, synthetische zoekopdracht (synthetic query) in het Nederlands te genereren op basis van een aangeleverde tekst en een specifieke taakomschrijving.
+
+De specifieke taakomschrijving van de zoekopdracht is als volgt gedefinieerd:
+\"\"\"
+{task_description}
+\"\"\"
+
+Houd bij het formuleren van de zoekopdracht rekening met de volgende vijf factoren:
+1. Formuleer de zoekopdracht in natuurlijke taal. 
+2. Vermijd specifieke eigennamen (personen, bedrijven, locaties) in de query.
+3. Houd de zoekopdrachten beknopt met een lengte van 7 tot 12 woorden.
+4. Zorg ervoor dat de bijgeleverde tekst een volledig antwoord geeft op de gegenereerde zoekopdracht.
+5. Richt de zoekopdracht specifiek op informatie die alleen in deze tekst te vinden is.
+
+STRIKTE NEGATIEVE CONSTRAINTS:
+- Kopieer NOOIT de letterlijke projectnaam, unieke opdrachtnaam of unieke jargonwoorden uit de tekst.
+- Formuleer de query alsof de zoeker de exacte naam van deze specifieke aanbesteding nog NIET kent, maar zoekt op basis van de functionele behoefte of inhoudelijke criteria.
+- Gebruik algemenere synoniemen voor specifieke projecttermen.
+
+Inhoud van de tekst:
+\"\"\"
+{text}
+\"\"\"
+
+Geef je antwoord STRIKT terug in het volgende JSON-formaat:
+{{
+    "synthetic_query": "jouw_gegenereerde_nederlandse_zoekopdracht_hier"
+}}
